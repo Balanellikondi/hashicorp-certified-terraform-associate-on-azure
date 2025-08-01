@@ -10,11 +10,15 @@ terraform {
 }
 
 # Configure the Microsoft Azure Provider
-subscription_id = var.subscription_id
+
+variable "subscription_id" {
+  type        = string
+  description = "Azure Subscription ID"
+}
+
 provider "azurerm" {
-
-  features {}
-
+  subscription_id = var.subscription_id
+  features        {}
 }
 
 # Create Resource Group 
