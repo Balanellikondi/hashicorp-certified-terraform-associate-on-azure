@@ -11,10 +11,7 @@ terraform {
 
 # Configure the Microsoft Azure Provider
 
-variable "subscription_id" {
-  type        = string
-  description = "Azure Subscription ID"
-}
+
 
 provider "azurerm" {
   subscription_id = var.subscription_id
